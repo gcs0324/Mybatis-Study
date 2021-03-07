@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<!--相当于实现这个接口-->
+<mapper namespace="com.kuang.dao.UserMapper">
+    <!--id对应方法名字-->
+    <!--相当于重写方法-->
+    <!--resultType将返回值封装成对象 要求属性名字相同-->
+    <select id="getUserList" resultType="com.kuang.pojo.User">
+        select * from mybatis.user;
+    </select>
+
+    <select id="getUserById" parameterType="int" resultType="com.kuang.pojo.User">
+        select * from mybatis.user where id = #{id};
+    </select>
+
+
+
+
+</mapper>
