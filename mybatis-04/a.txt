@@ -1,0 +1,5 @@
+在mybatis-config.xml中配置
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+输出日志文件
