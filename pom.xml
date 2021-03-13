@@ -38,6 +38,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
+        </dependency>
+
+
     </dependencies>
 
     <!--在build中配置resources,来防止我们资源导出失败的问题-->
