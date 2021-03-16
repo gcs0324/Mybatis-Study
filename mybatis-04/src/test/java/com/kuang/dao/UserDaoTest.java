@@ -33,32 +33,4 @@ public class UserDaoTest {
             sqlSession.close();
         }
     }
-
-    @Test
-    public void Log4jTest() {
-            logger.debug("debug");
-            logger.info("info");
-            logger.error("error");
-    }
-
-    @Test
-    public void selectByLimitTest() {
-        //第一步：获得sqlSession对象
-        SqlSession sqlSession = MybatisUtils.getSqlSession();
-        try {
-            //第二步：执行SQL
-            UserMapper userDao = sqlSession.getMapper(UserMapper.class);
-            HashMap<String,Integer> map = new HashMap<String, Integer>();
-            map.put("startIndex",0);
-            map.put("pageSize",1);
-            List<User> userByLimit = userDao.getUserByLimit(map);
-            for (User user : userByLimit) {
-                System.out.println(user);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            sqlSession.close();
-        }
-    }
 }
